@@ -1,0 +1,65 @@
+version: '3.2'
+
+services:
+
+  atelier:
+    build: atelier
+    container_name: atelier_
+    ports:
+      - 20080:80
+    volumes:
+      # Re-use local composer cache via host-volume
+      - ~/.composer-docker/cache:/root/.composer/cache:delegated
+      # Mount source-code for development
+      - ./:/app
+
+  portfolio:
+    build: portfolio
+    container_name: atelier_portfolio
+    ports:
+      - 21080:80
+    volumes:
+      # Re-use local composer cache via host-volume
+      - ~/.composer-docker/cache:/root/.composer/cache:delegated
+      # Mount source-code for development
+      - ./:/app
+
+  blog:
+    build: blog
+    container_name: atelier_blog
+    ports:
+      - 22080:80
+    volumes:
+      # Re-use local composer cache via host-volume
+      - ~/.composer-docker/cache:/root/.composer/cache:delegated
+      # Mount source-code for development
+      - ./:/app
+
+  backend:
+    build: backend
+    container_name: atelier_backend
+    ports:
+      - 23080:80
+    volumes:
+      # Re-use local composer cache via host-volume
+      - ~/.composer-docker/cache:/root/.composer/cache:delegated
+      # Mount source-code for development
+      - ./:/app
+
+  # mysql:
+  #   image: mysql:5.7
+  #   environment:
+  #     - MYSQL_ROOT_PASSWORD=verysecret
+  #     - MYSQL_DATABASE=yii2advanced
+  #     - MYSQL_USER=yii2advanced
+  #     - MYSQL_PASSWORD=secret
+
+  #pgsql:
+  #  image: postgres:9.5
+  #  environment:
+  #    - POSTGRES_DB=yii2advanced
+  #    - POSTGRES_USER=yii2advanced
+  #    - POSTGRES_PASSWORD=secret
+networks:
+  default:
+    name: alendre_mysql
