@@ -80,6 +80,7 @@ class RbacController extends Controller
         $auth->addChild($agreements, $indexRequired);
         $auth->addChild($agreements, $viewRequired);
         $auth->addChild($agreements, $printRequired);
+        $auth->addChild($agreements, $updateOwnRequired);
         // add "author" role and give this role the "createPost" permission
         // add "owners" role
         $owners = $auth->createRole('owners');
@@ -89,6 +90,7 @@ class RbacController extends Controller
         $auth->addChild($owners, $indexRequired);
         $auth->addChild($owners, $viewRequired);
         $auth->addChild($owners, $printRequired);
+        $auth->addChild($owners, $updateOwnRequired);
         // add "author" role and give this role the "createPost" permission
         // add "secretary" role
         $secretary = $auth->createRole('secretary');

@@ -1,24 +1,23 @@
 <?php
-namespace common\controllers;
+namespace atelier\controllers;
 
 use yii\web\Controller;
 use yii;
+use Google\Client;
+use Google\Service\Calendar;
 
-class GoogleController extends Controller{
+class CalendarController extends Controller{
     //require __DIR__ . '/vendor/autoload.php';
 
-    if (php_sapi_name() != 'cli') {
-        throw new Exception('This application must be run on the command line.');
-    }
-
-    use Google\Client;
-    use Google\Service\Calendar;
+    // if (php_sapi_name() != 'cli') {
+    //     throw new Exception('This application must be run on the command line.');
+    // }
 
     /**
      * Returns an authorized API client.
      * @return Client the authorized client object
      */
-    public function actionGoogleClient()
+    public function googleClient()
     {
         
         $client = new Client();
@@ -68,39 +67,19 @@ class GoogleController extends Controller{
         return $client;
     }
 
+    /**
+     * @return Client Show List of Events
+     */
+    public function actionIndex()
+    {
+        # code...
+        // Get the API client and construct the service object.
+        $client = $this->googleClient();
+        $service = new Calendar($client);
 
-    // Get the API client and construct the service object.
-    $client = getClient();
-    $service = new Calendar($client);
-
-    // Print the next 10 events on the user's calendar.
-    try{
-
-        $calendarId = 'primary';
-        $optParams = array(
-            'maxResults' => 10,
-            'orderBy' => 'startTime',
-            'singleEvents' => true,
-            'timeMin' => date('c'),
-        );
-        $results = $service->events->listEvents($calendarId, $optParams);
-        $events = $results->getItems();
-
-        if (empty($events)) {
-            print "No upcoming events found.\n";
-        } else {
-            print "Upcoming events:\n";
-            foreach ($events as $event) {
-                $start = $event->start->dateTime;
-                if (empty($start)) {
-                    $start = $event->start->date;
-                }
-                printf("%s (%s)\n", $event->getSummary(), $start);
-            }
-        }
-    }
-    catch(Exception $e) {
-        // TODO(developer) - handle error appropriately
-        echo 'Message: ' .$e->getMessage();
+        return $this->render('index', [
+            'client'  => $client,
+            'service' => $service,
+        ]);
     }
 }

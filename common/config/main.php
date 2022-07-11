@@ -10,11 +10,14 @@ return [
             'class' => 'yii\caching\FileCache',
         ],
         // you can set your theme here - template comes with: 'light' and 'dark'
-        'view' => [
-            'theme' => [
-                'pathMap' => ['@app/views' => '@webroot/themes/light/views'],
-                'baseUrl' => '@web/themes/light',
-            ],
+        // 'view' => [
+        //     'theme' => [
+        //         'pathMap' => ['@app/views' => '@webroot/themes/light/views'],
+        //         'baseUrl' => '@web/themes/light',
+        //     ],
+        // ],
+        'authManager' => [
+            'class' => 'yii\rbac\DbManager',
         ],
         'assetManager' => [
             'bundles' => [

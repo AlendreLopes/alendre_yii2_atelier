@@ -35,6 +35,17 @@ class UserIdentity extends ActiveRecord implements IdentityInterface
         return '{{%user}}';
     }
 
+    // public function beforeSave($insert)
+    // {
+    //     if (parent::beforeSave($insert)) {
+    //         if ($this->isNewRecord) {
+    //             $this->auth_key = \Yii::$app->security->generateRandomString();
+    //         }
+    //         return true;
+    //     }
+    //     return false;
+    // }
+
 //------------------------------------------------------------------------------------------------//
 // IDENTITY INTERFACE IMPLEMENTATION
 //------------------------------------------------------------------------------------------------//

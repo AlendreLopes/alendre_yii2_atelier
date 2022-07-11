@@ -1,7 +1,6 @@
 <?php
 /** @var yii\web\View $this */
 use yii\helpers\Html;
-use yii\bootstrap\Widget;
 ?>
 <div class="container text-center">
 
@@ -36,12 +35,14 @@ use yii\bootstrap\Widget;
 
 </div>
 
-<?= \talma\widgets\FullCalendar::widget([
-    'googleCalendar' => true,  // If the plugin displays a Google Calendar. Default false
-    'loading' => 'Carregando...', // Text for loading alert. Default 'Loading...'
-    'config' => [
-        // put your options and callbacks here
-        // see http://arshaw.com/fullcalendar/docs/
-        'lang' => 'pt-br', // optional, if empty get app language
-    ],
-]); ?>
+<div class="container">
+    <?= \talma\widgets\FullCalendar::widget([
+        'googleCalendar' => true,  // If the plugin displays a Google Calendar. Default false
+        'loading' => 'Carregando...', // Text for loading alert. Default 'Loading...'
+        'config' => [
+            // put your options and callbacks here
+            // see http://arshaw.com/fullcalendar/docs/
+            'lang' => 'pt-br', // optional, if empty get app language
+        ],
+    ]); ?>
+</div>

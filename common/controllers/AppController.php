@@ -26,15 +26,15 @@ use Yii;
         return [
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['login', 'logout', 'signup', 'downloads', 'print', 'gii', 'request-password-reset', 'create', 'update', 'delete'],
+                'only' => ['login', 'logout', 'signup', 'downloads', 'print', 'gii', 'create', 'update', 'delete'],
                 'rules' => [
                     [
-                        'actions' => ['index', 'about', 'contact', 'error', 'view'],
+                        'actions' => ['index', 'about', 'contact', 'error', 'view', 'request-password-reset'],
                         'allow' => true,
                         'roles' => ['?'],
                     ],
                     [
-                        'actions' => ['login', 'logout', 'signup', 'downloads', 'print', 'gii', 'request-password-reset'],
+                        'actions' => ['login', 'logout', 'signup', 'downloads', 'print', 'gii'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
