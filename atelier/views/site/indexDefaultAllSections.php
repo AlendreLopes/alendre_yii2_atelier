@@ -11,6 +11,7 @@ use yii\captcha\Captcha;
 ?>
 
 <section>
+
     <div class="jumbotron bg-transparent my-5">
 
         <h1 class="display-4 text-center">
@@ -37,6 +38,7 @@ use yii\captcha\Captcha;
         </div>
 
     </div>
+
 </section>
 
 <section id="about" class="bg-gray">
@@ -45,47 +47,36 @@ use yii\captcha\Captcha;
     </div>
 </section>
 
-<section id="team">
-
-    <div class="jumbotron bg-transparent my-5">
-        
-        <h1 class="display-4 text-center">
-            Nosso time
-        </h1>
-
-    </div>
-
+<section id="portfolio">
     <div class="row">
-        <?= $this->render('@app/views/site/team'); ?>
+        <?= $this->render('@app/views/site/portfolio'); ?>
     </div>
+</section>
 
+<section id="pricing">
+    <div class="row">
+        <?= $this->render('@app/views/site/pricing'); ?>
+    </div>
+</section>
+
+<section id="videos">
+    <div class="row">
+        <?= $this->render('@app/views/site/videos'); ?>
+    </div>
 </section>
 
 <section id="sponsors">
-
-    <div class="jumbotron bg-transparent my-5">
-        
-        <h1 class="display-4 text-center">
-            Sponsors
-        </h1>
-
-        <p class="lead">Se você tem alguma pergunta sobre como trabalhamos ou qualquer outra questão, dúvida ou sugestão, por favor fale conosco. Obrigado.</p>        
-
-    </div>
-
     <div class="row">
         <?= $this->render('@app/views/site/sponsors'); ?>
     </div>
-
 </section>
 
 <section id="contact">
 
     <div class="jumbotron text-center bg-transparent">
+        <h1 class="display-4">CONTATO</h1>
 
-        <h1 class="display-4">Contato</h1>
-
-        <p class="lead">Se você tem alguma pergunta sobre como trabalhamos ou qualquer outra questão, dúvida ou sugestão, por favor fale conosco. Obrigado.</p>
+        <p class="lead">If you have business inquiries or other questions, please fill out the following form to contact us. Thank you.</p>
 
     </div>
 

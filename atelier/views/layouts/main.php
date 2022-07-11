@@ -2,8 +2,6 @@
 
 /** @var \yii\web\View $this */
 /** @var string $content */
-
-use common\widgets\Alert;
 use atelier\assets\AppAsset;
 use yii\bootstrap4\Breadcrumbs;
 use yii\bootstrap4\Html;
@@ -20,7 +18,7 @@ AppAsset::register($this);
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta content="paraná,Paraná,curitiba,Curitiba,web,Web,Designer,designer,web designer,Web Designer,paraná curitiba web designer,ui,ux,ui designer,ux desginer,developer,full-stack,developer full-stack,freelancer" name="keywords">
     <meta content="Desenvolvimento Web Site, Intranet e Desktop, Identidade Visual, Construimos juntos a sua identidade visual, Desenvolvemos juntos o seu Aplicativo, Análise Estrutural e Tecnológica" name="description">
-    <meta name="author" content="Alexandre Lopes - www.Alendre.com.br">
+    <meta name="author" content="Alexandre Lopes - www.alendrelopes.eti.br">
     <?php $this->registerCsrfMetaTags() ?>
     <title><?= Html::encode(Yii::$app->name) ?></title>
     <!-- Robot-->
@@ -39,20 +37,19 @@ AppAsset::register($this);
         <?php
         NavBar::begin([
             'brandLabel' => Yii::$app->name,
-            'brandUrl' => Yii::$app->homeUrl.'/site/#hero',
+            'brandUrl' => Yii::$app->homeUrl.'/site/#atelier',
             'options' => [
                 'id'    => 'navbar-alendre',
                 'class' => 'navbar navbar-expand-md navbar-dark bg-dark fixed-top',
             ],
         ]);
         $menuItems = [
-            ['label' => 'Home', 'url' => ['/site/#hero']],
-            ['label' => 'About', 'url' => ['/site/#about']],
-            ['label' => 'Portfolio', 'url' => ['/site/#portfolio']],
-            ['label' => 'Videos', 'url' => ['/site/#videos']],
-            ['label' => 'Sponsors', 'url' => ['/site/#sponsors']],
-            ['label' => 'Contact', 'url' => ['/site/#contact']],
-            ['label' => 'Light/Dark', 'url' => ['#'], 'class'=>'btn btn-outline-secondary switch'],
+            ['label' => 'Atelier', 'url' => ['/site/#atelier']],
+            ['label' => 'Sobre nós', 'url' => ['/site/#about']],
+            ['label' => 'Nossa equipe', 'url' => ['/site/#team']],
+            ['label' => 'Patrocinadores', 'url' => ['/site/#sponsors']],
+            ['label' => 'Contato', 'url' => ['/site/#contact']],
+            // ['label' => 'Light/Dark', 'url' => ['#'], 'class'=>'btn btn-outline-secondary switch'],
         ];
         echo Nav::widget([
             'options' => ['class' => 'navbar-nav ml-auto'],
@@ -62,9 +59,8 @@ AppAsset::register($this);
         ?>
     </header>
 
-    <main id="hero" role="main" class="flex-shrink-0">
-        <div class="container">
-            <?= Alert::widget() ?>
+    <main id="fullpage" role="main" class="flex-shrink-0">
+        <div class="container-fluid">
             <?= $content ?>
         </div>
     </main>

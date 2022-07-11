@@ -1,166 +1,47 @@
 <?php
-
 /** @var yii\web\View $this */
-
 use yii\helpers\Html;
-
-$this->title = 'About';
+use yii\bootstrap\Widget;
 ?>
-<section class="jumbotron text-center">
-    <h1><?= Html::encode($this->title) ?></h1>
+<div class="container text-center">
+
     <div class="container">
-        <p class="lead text-muted">
-            <?= Yii::getAlias('@common'); ?>
-            <br>
-            Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.</p>
-        <p>
-            <p>This is the About page. You may modify the following file to customize its content:</p>
-            <code><?= __FILE__ ?></code>
-       </p>
-    </div>
-</section>
 
-<div class="album py-5 bg-light">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card mb-4 box-shadow">
-                <?= Html::img('@web/img/paris.jpg', ['alt' => 'My logo', 'class' => 'card-img-top']) ?>
-                <div class="card-body">
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                    </div>
-                </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card mb-4 box-shadow">
-                <?= Html::img('@web/img/paris.jpg', ['alt' => 'My logo', 'class' => 'card-img-top']) ?>
-                <div class="card-body">
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                    </div>
-                </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card mb-4 box-shadow">
-                <?= Html::img('@web/img/paris.jpg', ['alt' => 'My logo', 'class' => 'card-img-top']) ?>
-                <div class="card-body">
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                    </div>
-                </div>
-                </div>
-            </div>
+        <div class="section-title my-5">
+            <h2>Sobre nós</h2>
+            <h3>Nós desenvolvemos design de apps e websites.</h3>
+            <p>Nosso Atelier trabalha com a Heroku e AWS para dar total segurança ao seu website.</p>
+        </div>
 
-            <div class="col-md-4">
-                <div class="card mb-4 box-shadow">
-                <?= Html::img('@web/img/paris.jpg', ['alt' => 'My logo', 'class' => 'card-img-top']) ?>
-                <div class="card-body">
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                    </div>
+        <div class="row text-left">
+            <div class="col-lg-6 about-image">&nbsp;</div>
+            <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-6">Fazendo suas metas tangíveis.</div>
                 </div>
+                <div class="row">
+                    <div class="col-6">Promovendo seus produtos para seus consumidores.</div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card mb-4 box-shadow">
-                <?= Html::img('@web/img/paris.jpg', ['alt' => 'My logo', 'class' => 'card-img-top']) ?>
-                <div class="card-body">
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                    </div>
-                </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card mb-4 box-shadow">
-                <?= Html::img('@web/img/paris.jpg', ['alt' => 'My logo', 'class' => 'card-img-top']) ?>
-                <div class="card-body">
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                    </div>
-                </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card mb-4 box-shadow">
-                <?= Html::img('@web/img/paris.jpg', ['alt' => 'My logo', 'class' => 'card-img-top']) ?>
-                <div class="card-body">
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                    </div>
-                </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card mb-4 box-shadow">
-                <?= Html::img('@web/img/paris.jpg', ['alt' => 'My logo', 'class' => 'card-img-top']) ?>
-                <div class="card-body">
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                    </div>
-                </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card mb-4 box-shadow">
-                <?= Html::img('@web/img/paris.jpg', ['alt' => 'My logo', 'class' => 'card-img-top']) ?>
-                <div class="card-body">
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                    </div>
-                </div>
+                <div class="row">
+                    <div class="col-6">Divulgando seus serviços no Google Analytics</div>
                 </div>
             </div>
         </div>
+
+        <p>
+            Venha conosco para materializar, promover e encontrar seus clientes com a nosso ajuda ...
+        </p>
+
     </div>
+
 </div>
 
+<?= \talma\widgets\FullCalendar::widget([
+    'googleCalendar' => true,  // If the plugin displays a Google Calendar. Default false
+    'loading' => 'Carregando...', // Text for loading alert. Default 'Loading...'
+    'config' => [
+        // put your options and callbacks here
+        // see http://arshaw.com/fullcalendar/docs/
+        'lang' => 'pt-br', // optional, if empty get app language
+    ],
+]); ?>

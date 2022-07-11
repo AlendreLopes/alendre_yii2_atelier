@@ -10,7 +10,7 @@ return [
     'id' => 'app-atelier',
     'name' => 'Alendre Atelier',
     'language' => 'pt_BR',
-    'defaultRoute' => 'site',
+    // 'defaultRoute' => 'site',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'atelier\controllers',

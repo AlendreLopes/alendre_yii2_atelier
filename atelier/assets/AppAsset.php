@@ -15,7 +15,7 @@ class AppAsset extends AssetBundle
         'css/atelier.css',
     ];
     public $js = [
-        'js/atelier.js'
+        // 'js/fullpage.js'
     ];
     public $depends = [
         'yii\web\YiiAsset',
